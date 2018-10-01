@@ -1,15 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main Page View Controller-->
+        <scene sceneID="pFS-Di-bXd">
+            <objects>
+                <pageViewController storyboardIdentifier="MainPageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="8rT-9Q-94Y" customClass="MainPageViewController" customModule="UTutorialPageViewController" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eu9-wx-Igo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="842"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="MBO-IX-vd5">
+            <objects>
+                <viewController storyboardIdentifier="TutorialVC" id="Xgx-Jy-Yid" customClass="TutorialViewController" customModule="UTutorialPageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bK5-te-M8K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3W-fK-yoQ">
+                                <rect key="frame" x="12" y="53" width="351" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xm-UG-286">
+                                <rect key="frame" x="12" y="491" width="351" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="329" placeholderIntrinsicHeight="352" translatesAutoresizingMaskIntoConstraints="NO" id="FnB-jQ-Z8t">
+                                <rect key="frame" x="12" y="124" width="351" height="352"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7424651015" green="0.4864451078" blue="0.65752616210000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FnB-jQ-Z8t" firstAttribute="top" secondItem="R3W-fK-yoQ" secondAttribute="bottom" constant="38" id="4sr-M8-MzQ"/>
+                            <constraint firstItem="R3W-fK-yoQ" firstAttribute="leading" secondItem="EDW-YC-Vun" secondAttribute="leading" constant="12" id="BM1-sG-tN7"/>
+                            <constraint firstItem="EDW-YC-Vun" firstAttribute="trailing" secondItem="FnB-jQ-Z8t" secondAttribute="trailing" constant="12" id="HoK-1m-c6Z"/>
+                            <constraint firstItem="FnB-jQ-Z8t" firstAttribute="leading" secondItem="EDW-YC-Vun" secondAttribute="leading" constant="12" id="d62-fy-wUW"/>
+                            <constraint firstItem="6Xm-UG-286" firstAttribute="leading" secondItem="EDW-YC-Vun" secondAttribute="leading" constant="12" id="goN-pB-nQi"/>
+                            <constraint firstItem="EDW-YC-Vun" firstAttribute="trailing" secondItem="6Xm-UG-286" secondAttribute="trailing" constant="12" id="kk7-dx-u2B"/>
+                            <constraint firstItem="R3W-fK-yoQ" firstAttribute="top" secondItem="EDW-YC-Vun" secondAttribute="top" constant="33" id="qpb-2s-6Im"/>
+                            <constraint firstItem="6Xm-UG-286" firstAttribute="top" secondItem="FnB-jQ-Z8t" secondAttribute="bottom" constant="15" id="rev-xW-uCx"/>
+                            <constraint firstItem="EDW-YC-Vun" firstAttribute="trailing" secondItem="R3W-fK-yoQ" secondAttribute="trailing" constant="12" id="y6h-IN-beL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EDW-YC-Vun"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgTutorial" destination="FnB-jQ-Z8t" id="dY0-Qv-g06"/>
+                        <outlet property="lblDescription" destination="6Xm-UG-286" id="jDe-0g-FC7"/>
+                        <outlet property="lblTitle" destination="R3W-fK-yoQ" id="mDk-Bl-ns7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Qv-2C-Kk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="839"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UTutorialPageViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,6 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="306" y="29"/>
         </scene>
     </scenes>
 </document>
